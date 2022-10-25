@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+  crossorigin="anonymous"
+/>
+  <title>Document</title>
+  <%- include('./partials/head.ejs') %>
+<style>
+ 
+  .wishlist{
+    color: #c2bf00; font-family: 'Times New Roman', Times, serif; font-size: 25px;
+  }
+  .home{
+    color: #7e7e7e; font-family: 'Times New Roman', Times, serif; font-size: 25px;
+  }
+  .news{
+    color: #39ac33; font-family: 'Times New Roman', Times, serif; font-size: 50px;
+  }
+  .about{
+    color: #c2bf00; font-family: 'Times New Roman', Times, serif; font-size: 50px;
+  }
+</style>  
+
+</head>
+<body>
+  <%- include('./partials/nav.ejs') %>
+  <div>   
+    <img class="hero shadow" src="https://images.pexels.com/photos/4974914/pexels-photo-4974914.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" style="width: 100% ;">
+    </div>
+  
+  
+<div>
+  <div class="mt-5" style="width: 100%; height: 100%;">
+    <div class="shadow mt-5 pb-5" style="width: 100%; height: 100%;">
+        <h1 class="text-center" style="font-size: 70px; padding: 50px; font-family: 'Times New Roman';">Our Team</h1>
+        <div data-aos="fade-up"
+        data-aos-duration="1500" class="container mt-5 border border-2 shadow rounded-2 " style="height: 100% ;">
+            <h1 class="p-4 mx-5 mt-5"  style=" font-family: 'Alex Brush';margin-left: 5px; font-size: 70px; color: #910715; font-weight: 600; text-shadow: 0px 0px 10px rgb(199, 199, 199);"></h1>
+            <div class="container p-5 d-flex gap-5">
+              <img class="shadow rounded-5" src="/img/Harrie.jpg" alt="" style="height: 400px; width:550px; position: relative; bottom: 50px;">
+            <p style="text-align: justify; font-family: 'Times New Roman';font-size: large; font-weight: 300;"><span style="font-size: 50px; color: #910715;">Harrie</span><br><br>I am a backend developer with over 5 years of experience. I have worked with a variety of programming languages and frameworks, but my favorite language to work with is PHP, I enjoy working with data and building APIs that help power applications.Familiar with CSS,HTML and Javascript, Bootstrap. Proficient in MySql, PHP, React, NodeJs, Express and MongoDB</p>
+        </div>
+        </div>
+        
+        <div data-aos="fade-down" data-aos-duration="1500" class="container mt-5 border border-2 shadow rounded-2" style="height: 100% ;">
+          <h1 class="p-4 mx-5 mt-5"  style=" font-family: 'Alex Brush';margin-left: 5px; font-size: 70px; color: #910715; font-weight: 600; text-shadow: 0px 0px 10px rgb(199, 199, 199);"></h1>
+          <div class="container p-5 d-flex gap-5">
+          <p style="text-align: justify; font-family: 'Times New Roman';font-size: large; font-weight: 300;"><span style="font-size: 50px; color: #910715;">Marko</span><br><br> I am a frontend developer with a passion for building beautiful and user-friendly web applications. I have a strong understanding of HTML, CSS, and JavaScript, and I enjoy working with different frameworks and libraries to create interactive and responsive user interfaces. I am always looking to learn new technologies and stay up-to-date with the latest trends in web development.</p>
+          <img class="shadow rounded-5" src="/img/Marko.jpg" alt="" style="height: 400px; width:550px; position: relative; bottom: 50px;">
+         
+      </div>
+      
+      </div>
+      
+        
+        </div>
+        
+    </div>
+</div>
+<div>
+</div>
+
+
+
+
+ 
+</div>
+
+
+
+  <%- include('./partials/footer.ejs') %>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

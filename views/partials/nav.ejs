@@ -1,0 +1,106 @@
+<style>
+  .home:hover,.wishlist:hover,.news:hover,.about:hover{
+    transform: scale(1.1);
+    
+  }
+  .hov-text{
+        font-size: 40px;font-family: 'Alex Brush', cursive;
+        margin-top: -20px;
+        color: #910715; 
+        text-shadow: 2px 2px 10px rgb(243, 241, 241)0;
+        background: -webkit-linear-gradient(rgb(107, 4, 4), rgb(226, 0, 0));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+      }
+      
+
+      .home{
+        color: #39ac33; font-family: 'Times New Roman', Times, serif; font-size: 25px;
+      }
+      .wishlist{
+      font-family: 'Times New Roman', Times, serif; font-size: 25px;
+      }
+      .news{
+      font-family: 'Times New Roman', Times, serif; font-size: 25px;
+      }
+      .about{
+      font-family: 'Times New Roman', Times, serif; font-size: 25px;
+      }
+      .bi:hover{
+        transform: scale(1.1);
+        background-color: white;
+        animation-name: example;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      
+}
+@keyframes example {
+         0%   {color: rgb(255, 94, 0);}
+          25%  {color: orange;}
+          50%  {color: yellow;}
+          100% {color: rgb(243, 247, 206);}
+}
+</style>
+
+
+
+<nav class="navbar navbar-expand-lg bg-white pt-3 shadow">
+  <div class="nav container-fluid">
+    <a class="navbar-brand hov-text px-4 fw-bold" href="#">Wish <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-gift-fill" viewBox="0 0 16 16">
+      <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A2.968 2.968 0 0 1 3 2.506V2.5zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43a.522.522 0 0 0 .023.07zM9 3h2.932a.56.56 0 0 0 .023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0V3zm6 4v7.5a1.5 1.5 0 0 1-1.5 1.5H9V7h6zM2.5 16A1.5 1.5 0 0 1 1 14.5V7h6v9H2.5z"/>
+    </svg> Maker</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end px-4" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <form action="/Home" method="post">
+            <input type="hidden" name="userName" id="userName" value='<%= forUser%>'/>
+            <Button type="submit" class="nav-link wishlist border border-0 home" style="font-family: 'Times New Roman', Times, serif; font-size: 25px; background-color: transparent;">
+              Home
+            </Button>
+          </form>
+        </li>
+        <li class="nav-item">
+          <form action="/userPost" method="post">
+            <input type="hidden" name="userName" id="userName" value='<%= forUser%>'/>
+            <Button type="submit" class="nav-link wishlist border border-0 wishlist" style="font-family: 'Times New Roman', Times, serif; font-size: 25px; background-color: transparent;">
+              Wishlist
+            </Button>
+          </form>
+        </li>
+        <li class="nav-item">
+          <form action="/News" method="post">
+            <input type="hidden" name="userName" id="userName" value='<%= forUser%>'/>
+            <Button type="submit" class="nav-link wishlist border border-0 news" style="font-family: 'Times New Roman', Times, serif; font-size: 25px; background-color: transparent;">
+              News
+            </Button>
+          </form>
+        </li>
+        <li class="nav-item">
+          <form action="/About" method="post">
+            <input type="hidden" name="userName" id="userName" value='<%= forUser%>'/>
+            <Button type="submit" class="nav-link wishlist border border-0 about" style="font-family: 'Times New Roman', Times, serif; font-size: 25px; background-color: transparent;">
+              About
+            </Button>
+          </form>
+        </li>
+      </ul>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search text-success fw-bold mx-2" viewBox="0 0 16 16">
+        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-share-fill text-success fw-bold mx-2" viewBox="0 0 16 16">
+        <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+      </svg>
+      <a href="/"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-box-arrow-right text-success fw-bold mx-2" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+        <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+      </svg></a>
+    </div>
+  </div>
+</nav>
+
+
+

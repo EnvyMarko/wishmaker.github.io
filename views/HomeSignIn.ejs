@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.101.0">
+    <title>Signin</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"
+  ></script>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Ms+Madi&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/footers/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="http://fonts.cdnfonts.com/css/autumn-in-november" rel="stylesheet">
+  
+  
+  <title>Books | <%= title %></title>
+  <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .animate{
+        border: 0px solid;
+        margin-left: -22px;
+        width: 100%;
+        box-shadow: 0px 0px 10px  #0a0a0a;
+      /* box-shadow: 5px 10px 18px #888888 */
+      }
+      .btn:hover{
+        transform: scale(1.1);
+      }
+      .hov-text{
+        font-size: 40px;font-family: 'Alex Brush', cursive;
+        margin-top: -20px;
+        color: #910715; 
+        text-shadow: 2px 2px 10px rgb(243, 241, 241)0;
+        background: -webkit-linear-gradient(rgb(107, 4, 4), rgb(226, 0, 0));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+      }
+
+      
+      .hov-link:hover{
+        color: #6d5bbd;
+      }
+      .hov-link{ 
+      font-size: 17px;
+      margin-left: 5px; 
+      color: #b382e4;
+      font-family: Arial, Helvetica, sans-serif;
+      }
+      .bi:hover{
+        color: #000c11;
+      }
+      .star{
+        width: 15px;
+        height: 15px;
+        border-radius: 80%;
+        box-shadow: 10px 19px 20px  #f3eec2;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        animation-name: example;
+        animation-duration: 3s ;
+        animation-iteration-count: infinite;
+        position: absolute;
+        top: 146px;
+        left: 237px;
+      }
+      @keyframes example {
+      from {background-color: rgb(238, 255, 1);}
+      to {background-color: rgb(255, 251, 40);}
+      }
+      
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+
+    
+    <div class=" container-fluid" >
+      <div class="row">
+        <div class="col bg-white" style="background-color: transparent;">
+          <div class="star"></div>
+          <img class="animate" style=" height: calc(100vh - 2px); width: 108% " src="/img/tree.jpg" alt="imagegift"></div>
+          
+
+          <div class="col-sm-8  border-start border-5 " ><h3 class="mt-4" style="font-family:Helvetica;"></h3>
+            <div class="navbar rounded-2"><h1 class="fw-bold hov-text navbar-brand p-1"> Wish <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-gift-fill" viewBox="0 0 16 16">
+              <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A2.968 2.968 0 0 1 3 2.506V2.5zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43a.522.522 0 0 0 .023.07zM9 3h2.932a.56.56 0 0 0 .023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0V3zm6 4v7.5a1.5 1.5 0 0 1-1.5 1.5H9V7h6zM2.5 16A1.5 1.5 0 0 1 1 14.5V7h6v9H2.5z"/>
+            </svg> Maker 
+             </h1></div>
+             
+            <div class="snowflakes" aria-hidden="true">
+              <div class="snowflake ">
+              ❅
+              </div>
+              <div class="snowflake">
+              ❅
+              </div>
+              <div class="snowflake">
+              ❆
+              </div>
+              <div class="snowflake">
+              ❄
+              </div>
+              <div class="snowflake">
+              ❅
+              </div>
+              <div class="snowflake" style="color: rgb(195, 205, 236);">
+              ❆
+              </div>
+              <div class="snowflake ">
+              ❄
+              </div>
+              <div class="snowflake" style="color: rgb(195, 205, 236);">
+              ❅
+              </div>
+              <div class="snowflake ">
+              ❆
+              </div>
+              <div class="snowflake" style="color: rgb(195, 205, 236);">
+              ❄
+              </div>
+            </div>
+            <main class="form-signin w-100 align-self-center " style="height: calc(100vh - 160px) ;">
+          
+          <form action="/userLogin" method="post">
+          
+          <div class="p-5">
+          <div class="p-5">
+          
+          <h1 class="h3 mb-3 fw-normal mt-2 fw-bold fs-2">Login Your Account</h1>
+          <div class="d-flex justify-content-center">
+          <p>New to Wish Maker?</p>
+          <a href="/register" class="justify-content-end hov-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Sign up here for free</a>
+          </div>
+          <div class="form-floating">
+            <input type="text" class="form-control" id="user_name" name="user_name">
+            <label for="floatingInput">Username</label>
+          </div>
+          <div class="form-floating mt-2">
+            <input type="password" class="form-control" id="password" name="password">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <div class="d-flex justify-content-start">
+          <div class="checkbox">
+                  
+                  <input class="form-check-input mt-3" type="checkbox" value="Remember me" id="defaultCheck1">
+                  <label class="form-check-label pt-3 text-secondary text-shadow" for="defaultCheck1">
+                    Rememeber me
+                  </label>
+            
+          <div class="mt-2">
+            <input style="background-color: #910715; width: 100px; margin: 0px;" type="submit" class="btn  nav-link  text-white border-grey" value="Sign In"></div>
+            <div class="mt-2 text-center d-flex gap-2" style="margin-left: 300px; position: fixed;"><a  style="color: #29AAE1"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+              <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+            </svg></a><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook"  viewBox="0 0 16 16">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+            </svg></a><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-google text-danger" viewBox="0 0 16 16">
+              <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+            </svg></a><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16">
+              <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
+              <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
+            </svg></div>
+          </div>
+        </form>
+      </main>
+
+      </div>
+      </div>
+      
+
+      
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sign Up Here</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-5 pt-0">
+        <form action="/addUser" method="POST">
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control rounded-3" id="email" name="email" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating mb-3">
+              <input type="text" class="form-control rounded-3" id="user_name" name="user_name" placeholder="username">
+              <input type="hidden" name="userName" id="userName" value="user_name"/>
+              <label for="floatingUsername">Username</label>
+            </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control rounded-3" id="password" name="password" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <input class="w-100 mb-2 btn btn-lg rounded-3 text-white "style="background-color: #910715;" type="submit" value="Sign Up" />
+          <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+          <hr class="my-4">
+          <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+          <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-3" type="submit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                  <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                </svg>
+            Sign up with Twitter
+          </button>
+          <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                </svg>
+            Sign up with Facebook
+          </button>
+          <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+            Sign up with GitHub 
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+    
+  </body>
+  
+</html>

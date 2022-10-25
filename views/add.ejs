@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+
+  <style>
+
+    .btn:hover{
+      color:black
+
+    }
+  </style>
+  <body>
+    <!-- if use "=" it escapes special characters and we end up a string value instead of raw html -->
+    <%- include('./partials/adminnav.ejs') %>
+    <div class="container-fluid d-flex justify-content-center mt-5">
+    <div class="create-book">
+      <form action="/books" method="POST">
+        <div class="form-container">
+          <label for="title">Title:</label>
+          <input class="border border-dark" type="text" name="title" id="title" />
+          <br />
+          <label for="order">Order:</label>
+          <input class="border border-dark" type="text" name="order" id="order" />
+          <br />
+          <label for="url">Image Url</label>
+          <input class="border border-dark" type="text" name="url" id="url" />
+          <br />
+          <label for="completed">Completed:</label>
+          <input class="border border-dark" type="text" name="completed" id="completed" />
+          <br />
+          <label for="author">Author:</label>
+          <input class="border border-dark" type="text" name="author" id="author" />
+          <br />
+          <input class="btn btn-dark" type="submit" value="Submit" />
+        </div>
+      </form>
+      <div><br><br><br></div>
+
+    </div>
+  </div>
+    
+  </body>
+</html>

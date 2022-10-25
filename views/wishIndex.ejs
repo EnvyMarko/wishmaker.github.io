@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <!-- if use "=" it escapes special characters and we end up a string value instead of raw html -->
+   <header>
+    
+      <%- include('./partials/nav.ejs') %>
+    
+  </header>
+
+    <div class="hero-image"  > <img class="hero-image" style="background-color:  black" src="https://images.pexels.com/photos/1130980/pexels-photo-1130980.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="100%">
+      <div class="hero-text fw-bold">
+        <h1 style="font-size:100px; text-shadow: 2px 2px 4px #7a7a7a; opacity: 100%; font-family: Helvetica;"><span style="color:red ;">Book</span> Archives</h1>
+      </div>
+    </div>
+   <hr>
+    <div class="book-content container-fluid">
+      <h2 class="all-books fs-1">Kindle <span style="color:red; text-shadow: 2px 2px 4px #2c2c2c;">Wish</span> List</h2>
+      
+      <div class="books">
+        <!-- check if there is a book -->
+        <% if (wish.length > 0){ %>
+        <!-- loop the data -->
+        <% wish.forEach(wishes => { %>
+          <!-- <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div> -->
+          <!-- </div> -->
+          <!-- <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div> -->
+
+        <div class="card shadow"  >
+          <div>
+            <a href="/books/<%= wishes._id %>"><img class="card-img-top m-1 text-shadow"  id="cardDisplay" style="width: 20rem;" src=<%= wishes.url %> ></a>
+          </div>
+          
+          <a class="single text-dark">
+            <h3 class="text-center"><%= wishes.title %></h3>
+          </a>
+          <p class="text-center">Author:<%= wishes.author %></p>
+          <br/>
+          <p class="text-center">Details:<%= wishes.details %></p>
+
+          <!--------------------------------------------- update sept 10, 2022- Marko --------------------------------------------- -->
+          <!-- <p class="text-center">Product ID: <%= wishes.id%></p> --> <!------- hid ID for transfer to Admin page.---------------------->
+
+
+
+          <div class="m-2 d-flex justify-content-center gap-1">
+            <a href="/wish/<%= wishes._id %>" class="btn btn-primary">Details</a> 
+
+<!-----------------------Hidden will transfer to admin page- Marko Sept 10------------------------------->
+            <!-- <a href="/update/<%= wishes._id %>" class="btn btn-primary">Edit</a>
+            <form action="/books/<%= wishes._id %>/?_method=DELETE" method="POST">
+              <input type="submit" value="Delete" class="btn btn-primary"> -->
+<!-----------------------Hidden will transfer to admin page ------------------------------->
+            
+            
+            </form>
+          </div>
+          
+        </div>
+        <% }) %> <% } else{ %>
+        <h2>No Wish to display</h2>
+        <%} %>
+      </div>
+      <div class="p-5"><hr></div>
+      <!-- modal start -->
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+
+
+
+<!-- modal end -->
+
+    </div>
+    <%- include('./partials/footer.ejs') %>
+    <script>
+      const deleteItem = document.querySelector("a.delete");
+
+      deleteItem.addEventListener("click", function (e) {
+        const endpoint = `/books/${deleteItem.dataset.doc}`;
+
+        fetch(endpoint, {
+          method: "DELETE",
+        })
+          .then((response) => response.json())
+          .then((data) => (window.location.href = data.redirect))
+          .catch((err) => console.log(err));
+      });
+    </script>
+  </body>
+</html>

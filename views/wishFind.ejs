@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <!-- if use "=" it escapes special characters and we end up a string value instead of raw html -->
+    <%- include('./partials/nav.ejs') %>
+    <div class="b-example-divider"></div>
+
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="<%= wish.wishimg %>" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3"><%= wish.title %></h1>
+        <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti asperiores quaerat, iste soluta tenetur sunt eaque maxime libero vero expedita?</p>
+        <h5 class=" fw-bold lh-1 mb-3">Author: <%= wish.author %></h5>
+        <p class=" fw-bold lh-1 mb-3 text-danger">Your Wish:<span class="text-dark"> <%= wish.Wishitem %></span></p>
+        <p class=" fw-bold lh-1 mb-3 text-danger">Details:<span class="text-dark"> <%= wish.details %></span></p>
+        <p class=" fw-bold lh-1 mb-3 text-danger">Created at:<span class="text-dark"><%= wish.createdAt %></span></p>
+        <p class=" fw-bold lh-1 mb-3 text-danger">Updated at:<span class="text-dark"><%= wish.updatedAt %></span></p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <div>
+            <a href="/update/<%= wish._id %>"
+              ><i class="fa-solid fa-pen-to-square"></i
+            ></a>
+            <a class="delete" data-doc="<%= wish._id %>"><i class="fa-solid fa-trash"></i></a>
+          </div>
+          <a class="btn btn-primary" href="/">Back to home</a></button>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="b-example-divider"></div>
+      </div>
+    </div>
+  </div>
+    <%- include('./partials/footer.ejs') %>
+
+    <script>
+      const deleteItem = document.querySelector("a.delete");
+
+      deleteItem.addEventListener("click", function (e) {
+        const endpoint = `/wish/${deleteItem.dataset.doc}`;
+
+        fetch(endpoint, {
+          method: "DELETE",
+        })
+          .then((response) => response.json())
+          .then((data) => (window.location.href = data.redirect))
+          .catch((err) => console.log(err));
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+  crossorigin="anonymous"
+/>
+
+  <%- include('./partials/head.ejs') %>
+<style>
+
+  .wishlist{
+    color: #c2bf00; font-family: 'Times New Roman', Times, serif; font-size: 25px;
+  }
+  .home{
+    color: #7e7e7e; font-family: 'Times New Roman', Times, serif; font-size: 25px;
+  }
+  .news{
+    color: #39ac33; font-family: 'Times New Roman', Times, serif; font-size: 50px;
+  }
+.hero{
+    position: relative;
+}
+.countdown{
+    position: absolute;
+    top: 400px;
+    left: 30px;
+    z-index: 1;
+}
+.mask{
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    top: 370px;
+    background-color: rgb(255, 255, 255);
+    border: #7e7e7e;
+    
+    opacity: 50%;
+}
+</style>  
+
+</head>
+<body>
+  <%- include('./partials/nav.ejs') %>
+<div>   
+<img class="hero shadow" src="img/games2.JPG" alt="" style="width: 100% ;">
+</div>
+<div>
+    <div class="container-fluid  mt-1 text-center countdown " style="width:95%;min-width:200px;"><iframe class="animate__animated animate__backInDown" src="https://beepmyclock.com/widget/countdown?td=202211250000&tt=Christmas" frameborder="0" style="border:0;height:150px;"></iframe><p style="text-align:center;font-family:Arial, San-Serif;font-size:11px;margin:0"> </p></div>
+    <div  class="mask shadow "></div>
+</div>
+<div class="mt-5" style="width: 100%; height: 100%;">
+    <div class="shadow mt-5 pb-5" style="width: 100%; height: 100%;">
+        <h1 class="" style="font-size: 70px; padding: 50px; font-family: 'Times New Roman';">Christmas Cocktails to Ease You into the Holiday Spirit</h1>
+        <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" class="container mt-5 border border-2" style="height: 100% ;">
+            <h1 class="p-4 mx-5 mt-5"  style=" font-family: 'Alex Brush';margin-left: 5px; font-size: 70px; color: #910715; font-weight: 600; text-shadow: 0px 0px 10px rgb(199, 199, 199);">Eggnog</h1>
+            <div class="container p-5 d-flex gap-5">
+            <p style="text-align: justify; font-family: 'Times New Roman';font-size: large; font-weight: 300;"><span style="font-size: 30px">Eggnog</span> is creamy, sweet, and the perfect addition to your holiday with or without the alcohol! It descended from medieval Britain’s “posset”, a milky drink similar to ale that was used to toast to prosperity. The American colonies embraced the drink in the 1700’s, using rum as the alcoholic base; since eggs and milk were plentiful, it was an affordable drink option, especially for the holidays.
+
+                What about the name? It’s thought to come from the word “noggin”, which was a wooden cup, combined with “grog”, a strong beer.</p>
+            <img class="shadow" src="https://christmashq.imgix.net/assets/images/food-and-drinks/cocktails/eggnog-cocktail.jpg?fit=crop&q=50&w=960&auto=format" alt="" style="height: 400px; width:550px; position: relative; bottom: 50px;">
+        </div>
+        </div>
+        </div>
+        
+    </div>
+</div>
+<div class="b-example-divider"></div>
+<div class="mt-5" style="width: 100%; height: 100%;">
+    <div class="shadow mt-5 pb-5" style="width: 100%; height: 100%;">
+        <h1 class="" style="font-size: 70px; padding: 50px; font-family: 'Times New Roman';">Christmas Games for the Best Holiday <br> Party Ever</h1>
+        <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" class="container mt-5 border border-2 " style="height: 100% ;">
+            <h1 class="p-4 mx-5 mt-5"  style=" font-family: 'Alex Brush';margin-left: 5px; font-size: 70px; color: #910715; font-weight: 600; text-shadow: 0px 0px 10px rgb(199, 199, 199);">Christmas Charades</h1>
+            <div class="container p-5 d-flex gap-5">
+            <p style="text-align: justify; font-family: 'Times New Roman';font-size: large; font-weight: 300;"><span style="font-size: 30px"></span> Have your guests contribute ideas related to Christmas (songs, movies, characters – be creative!) and mix them up in a bowl. Divide into teams. Each person will draw a topic and act it out without saying a word while their team guesses what they’re demonstrating. The team with the most correct guesses wins!</p>
+            <img class="shadow" src="https://christmashq.imgix.net/assets/images/traditions/games/christmas-charades-game.jpg?fit=crop&q=50&w=960&auto=format" alt="" style="height: 400px; width:550px; position: relative; bottom: 50px;">
+        </div>
+        </div>
+        </div>
+        
+    </div>
+</div>
+<div class="b-example-divider"></div>
+<div class="mt-5" style="width: 100%; height: 100%;">
+    <div class="shadow mt-5 pb-5" style="width: 100%; height: 100%;">
+        <h1 class="" style="font-size: 70px; padding: 50px; font-family: 'Times New Roman';">Christmas Design for 2022</h1>
+        <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" class="container mt-5 border border-2 " style="height: 100% ;">
+            <h1 class="p-4 mx-5 mt-5"  style=" font-family: 'Alex Brush';margin-left: 5px; font-size: 70px; color: #910715; font-weight: 600; text-shadow: 0px 0px 10px rgb(199, 199, 199);">Christmas Decors & Design</h1>
+            <div class="container p-5 d-flex gap-5">
+            <p style="text-align: justify; font-family: 'Times New Roman';font-size: large; font-weight: 300;"><span style="font-size: 30px"></span>When it comes to designing the perfect Christmas tree, there are a few key things to keep in mind. First, you'll want to make sure that your tree is proportionate to the room it's in. A too-big or too-small tree can throw off the entire look of your space. Second, take into consideration the height of your ceilings—you don't want your tree to be too short or too tall. Third, think about the overall aesthetic you're going for. Are you going for a traditional look with classic decorations, or something more modern? Fourth, pay attention to the little details, like the type of tree stand you use and the way you wrap the tree's base. These small touches can make a big difference in the overall look of your tree.</p>
+            <img class="shadow" src="https://christmashq.imgix.net/assets/images/decorations/trees/christmas-tree-with-gifts-by-mantel-piece.jpg?fit=crop&q=50&w=960&auto=format" alt="" style="height: 400px; width:550px; position: relative; bottom: 50px;">
+        </div>
+        </div>
+        </div>
+        
+    </div>
+</div>
+
+
+  <%- include('./partials/footer.ejs') %>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <!-- if use "=" it escapes special characters and we end up a string value instead of raw html -->
+    <%- include('./partials/nav.ejs') %>
+    <h1 class="update-book">Kindle Wish Update</h1>
+    <div class="create-book">
+      <div class="container-fluid d-flex justify-content-center mt-5">
+      <form action="/update/<%= wish._id %>" method="POST">
+        <div class="form-container">
+          <label for="title">Your Wish:</label>
+          <input
+            type="text"
+            value="<%= wish.Wishitem %>"
+            name="Wishitem"
+            id="Wishitem"
+          />
+          <br />
+          <label for="order">Details:</label>
+          <textarea name="details" id="details"><%= wish.details %></textarea>
+          <br />
+        
+          <label for="url">Image</label>
+          <input type="text" 
+          value="<%= wish.wishimg %>"
+          name="wishimg" 
+          id="wishimg" />
+          <br>
+          <label for="author">Author:</label>
+          <input
+            type="text"
+            value="<%= wish.author %>"
+            name="author"
+            id="author"
+          />
+          <br />
+          <input type="submit" value="Update" />
+        </div>
+      </form>
+    </div>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>

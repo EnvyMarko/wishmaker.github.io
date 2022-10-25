@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+</head>
+    <body>
+    <%- include('./partials/userNav.ejs') %>
+    <div class="book-content container-fluid">
+      <h1><center>List of All Wishes</center></h1>
+          <% if (wish.length > 0){ %>
+          <!-- loop the data -->
+          <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>Wish Item</th>
+                    <th>Details</th>
+                    <th>Author</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+          <% wish.forEach(wishes => { %>
+              <tbody>
+                <tr class="table-active">
+                  
+                  <td><%= wishes.Wishitem %></td>
+                  <td><%= wishes.details %></td>
+                  <td><%= wishes.author %></td>
+                  <td>
+                    <form action="/userDeletePost/<%= wishes._id %>/?_method=DELETE" method="POST">
+                      <a href="/wish/<%= wishes._id %>" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal<%= wishes._id %>">Edit</a>
+                      <input type="hidden" name="userName" id="userName" value='<%= forUser%>'/>
+                      <input type="submit" value="Delete" class="btn btn-primary">
+                    </form>
+                  </td>
+                </tr>
+              </tbody>
+              <div class="modal fade" id="exampleModal<%= wishes._id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Update Wish</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form action="/userUpdate/<%= wishes._id %>" method="POST">
+                        <div class="form-container">
+                          <label for="title">Wish Title:</label>
+                          <input type="hidden" name="userName" id="userName" value='<%= forUser%>'/>
+                          <input
+                            type="text"
+                            value="<%= wishes.Wishitem %>"
+                            name="Wishitem"
+                            id="Wishitem"
+                          />
+                          <br />
+                          <label for="order">Details:</label>
+                          <input
+                            type="text"
+                            value="<%= wishes.details %>"
+                            name="details"
+                            id="details"
+                          />
+                          <br />
+                          <label for="url">Author</label>
+                          <input type="text" 
+                          value="<%= wishes.author %>"
+                          name="author" 
+                          id="author" />
+                          <br>
+                          <label for="url">Item Url</label>
+                          <input type="text" 
+                          value="<%= wishes.itemUrl %>"
+                          name="itemUrl" 
+                          id="itemUrl" />
+                          <br>
+                          <label for="url">Wish Img</label>
+                          <input type="text" 
+                          value="<%= wishes.wishimg %>"
+                          name="wishimg" 
+                          id="wishimg" />
+                          <br />
+                          <input type="submit" value="Update" />
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+          <% }) %> <% } else{ %>
+          </table>
+          
+          <h2>No PostAvailable</h2>
+          <%} %>
+    </div>    
+</body>
+</html>

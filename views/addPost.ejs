@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+
+  <style>
+
+    .btn:hover{
+      color:black
+
+    }
+  </style>
+  <body>
+    <!-- if use "=" it escapes special characters and we end up a string value instead of raw html -->
+    
+<%- include('./partials/userNav.ejs') %>
+    <div class="container-fluid d-flex justify-content-center mt-5">
+    <div class="create-book">
+      <form action="/userWish" method="POST">
+        <div class="form-container">
+          <h1>Hi <%= forUser%></h1>
+          <h2>Add your Wish Here</h2>
+          <label>Your Wish:</label>
+          <input type="hidden" name="userName" id="userName" value='<%= forUser%>'/>
+          <input class="border border-dark" type="text" name="Wishitem" id="Wishitem" />
+          <br />
+          <label>Details:</label>
+          <textarea class="border border-dark" name="details" id="details"></textarea>
+          <br />
+          <label>Item Url</label>
+          <input class="border border-dark" type="text" name="itemUrl" id="itemUrl" />
+          <br />
+          <label>Image Url</label>
+          <input class="border border-dark" type="text" name="wishimg" id="wishimg" />
+          <br />
+          <label>Author:</label><h3><%= forUser%></h3>
+          <input class="border border-dark" type="hidden" name="author" id="author" value='<%= forUser%>' />
+          <br />
+          <input class="btn btn-dark" type="submit" value="Submit" />
+        </div>
+      </form>
+      <div><br><br><br></div>
+
+    </div>
+  </div>
+    
+  </body>
+</html>

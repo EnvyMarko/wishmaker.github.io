@@ -1,0 +1,200 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: rgb(245, 244, 243);
+    font-family: "Roboto", sans-serif;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+a{
+    text-decoration: none;
+    color: rgb(14, 81, 190);
+}
+/* hero css */
+.hero-image {
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+  }
+  
+
+  #cardDisplay {
+    height: 300px;
+    width: 100%;
+
+  }
+
+
+
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+  }
+/* hero css added */
+
+
+
+/* added hover */
+.nav-link:hover{
+    
+    color: red;
+} 
+
+
+
+/* a:hover{
+    color: rgb(34, 185, 230);
+    transition: all ease 500ms;
+} */
+
+
+.book-content .all-books {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.books-content {
+    width:fit-content;
+    height: fit-content;
+    line-height: 2rem;
+    padding: 2.5rem 3rem;
+    position: relative;
+}
+
+.books-content::before {
+   content: "";
+   position: absolute;
+   width: 0.5rem;
+   height: 50%;
+   background-color: rgba(169, 16, 16, 0.894);
+   left: 5%;
+   top: 50%;
+   transform: translate(-5%, -50%);
+}
+
+.books-content h2 {
+    color: rgb(4, 111, 119);
+}
+
+.books-content p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-evenly;
+}
+
+/* form {
+   
+   background-color: rgb(218, 218, 218);
+    border: 1px solid black;
+    line-height: 2rem;
+    flex-direction: column;
+    width: 500px;
+    padding: 2rem;
+} */
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+}
+
+
+
+
+form input {
+    font-size: 1.5rem;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 2px solid #000;
+    width: 100%;
+}
+
+input:focus {
+   border: none;
+   border-bottom: 2px solid rgb(5, 89, 208);
+   outline: none;
+}
+
+input[type="submit"] {
+    border: 1px solid rgb(250, 248, 248);
+    width: min-content;
+    margin: 0 auto;
+    padding: 0.5rem;
+}
+
+input[type="submit"]:hover {
+    background-color: white;
+}
+
+/* .id-content{
+    width:fit-content;
+    height: fit-content;
+    line-height: 2rem;
+    padding: 2.5rem 3rem;
+ 
+  height: fit-content;
+  border: 1px solid black;
+} */
+
+.id-content .id-content-head{
+    font-size: 1.2rem;
+    color: red;
+}
+
+
+
+.error404 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.fa-solid{
+    font-size: 2rem;
+    margin:15px 15px 0 0;
+    cursor: pointer;
+}
+
+.update-book {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./partials/head.ejs') %>
+<style>
+
+  .wishlist{
+    color: #c2bf00; font-family: 'Times New Roman', Times, serif; font-size: 25px;
+  }
+  .home{
+    color: #7e7e7e; font-family: 'Times New Roman', Times, serif; font-size: 25px;
+  }
+  
+  
+</style>  
+
+</head>
+<body>
+  <%- include('./partials/nav.ejs') %>
+  <div>   
+    <img class="hero shadow" src="https://images.pexels.com/photos/3298040/pexels-photo-3298040.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" style="width: 100% ;">
+    </div>
+    <div class="">
+      <h1 class="text-center" style="font-size: 70px; padding: 50px; font-family: 'Times New Roman';">Our Wish List</h1>
+    </div>
+<div class="container d-flex flex-wrap">
+  <div class="container row d-flex flex-wrap ">
+    <h2 style="font-family: 'Times New Roman', Times, serif; font-size: 25px;"></h2>
+        <% if (wish.length > 0){ %>
+        <!-- loop the data -->
+          
+        <% wish.forEach(wishes => { %>
+          <div class="card mb-2 container border shadow p-3 mb-5 bg-body rounded" style="width: 37rem;">
+            <div class="card-body">
+              <div class="row align-items-start container">
+                <div class="col-8">
+                  <h5 class="card-title" style="color: #910715; font-family: 'Times New Roman';font-weight: 600;" ><%= wishes.Wishitem %></h5>
+                  <h6 class="card-subtitle mb-2 ">User: <%= wishes.author %></h6>
+                  <p class="card-text">Wish Details:</p>
+                  <p class="card-text"><%= wishes.details %></p>
+                  <a href='<%= wishes.itemUrl %>' class="card-link" target="_blank"><%= wishes.itemUrl %></a>
+                </div>
+                <div class="col-3">
+                  <img src='<%= wishes.wishimg %>'>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% }) %> <% } else{ %>
+        
+        <h2>No Books to display</h2>
+        <%} %>
+  </div>  
+</div>
+</body>
+</html>
+<%- include('./partials/footer.ejs') %>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/styleBoard.css">
+    <%- include('./partials/head.ejs') %>
+</head>
+
+<%- include('./partials/adminNav.ejs') %>
+
+<body>
+    <div class="book-content container-fluid">
+        <h1 style="text-align: center;">Welcome To User's Dashboard </h1> 
+            <div class="table">
+              <% if (user.length > 0){ %> 
+                <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Add User
+                </button> -->
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>Email</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                      <% user.forEach(user => { %>
+                      <tr class="table-active">
+                        <td><%= user.id %></td>
+                        <td><%= user.user_name %></td>
+                        <td><%= user.password %></td>
+                        <td><%= user.email %></td>
+                        <td><%= user.date %></td>
+                      </tr>
+                      <% }) %>
+                    </tbody>
+                  </table>
+                  <% } else{ %>
+                <%} %>
+    </div>
+    <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add User</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="/addUser" method="POST">
+          <div class="form-container">
+            <h1>Hi <%= forUser%></h1>
+            <label for="title">Create User</label>
+            <input type="hidden" name="userName" id="userName" value='<%= forUser%>'/>
+            <input class="border border-dark" type="text" name="user_name" id="user_name" />
+            <br />
+            <label for="order">Password:</label>
+            <input type="password" name="password" id="password"/>
+            <br />
+            <label for="url">Email:</label>
+            <input class="border border-dark" type="text" name="email" id="email" />
+            <br />
+            <input class="btn btn-dark" type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
